@@ -20,8 +20,8 @@ public class Test1 {
             Department department = new Department("Sales", 2000, 1200);
             Employee emp1 = new Employee("Sonya", "Salayeva", 1500);
             Employee emp2 = new Employee("Mariya", "Memmedova", 1800);
-            department.addEmployeeToDepartment(emp1);
-            department.addEmployeeToDepartment(emp2);
+            department.addEployeeToDepartment(emp1);
+            department.addEployeeToDepartment(emp2);
             session.beginTransaction();
             session.persist(department);
             session.getTransaction().commit();

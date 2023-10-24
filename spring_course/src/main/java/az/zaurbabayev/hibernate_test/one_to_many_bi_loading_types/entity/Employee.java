@@ -1,6 +1,6 @@
 package az.zaurbabayev.hibernate_test.one_to_many_bi_loading_types.entity;
 
-import az.zaurbabayev.hibernate_test.one_to_many_uni.entity.Department;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -25,6 +25,8 @@ public class Employee {
             , CascadeType.REFRESH})
     @JoinColumn(name = "department_id")
     private Department department;
+
+
 
     public Employee() {
     }
