@@ -1,4 +1,4 @@
-package az.zaurbabayev.hibernate_test.many_to_many;
+package az.zaurbabayev.hibernate_test.many_to_many.entity;
 
 import jakarta.persistence.*;
 

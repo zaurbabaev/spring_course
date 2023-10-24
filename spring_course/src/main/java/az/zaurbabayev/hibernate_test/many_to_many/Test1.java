@@ -1,5 +1,7 @@
 package az.zaurbabayev.hibernate_test.many_to_many;
 
+import az.zaurbabayev.hibernate_test.many_to_many.entity.Child;
+import az.zaurbabayev.hibernate_test.many_to_many.entity.Section;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
