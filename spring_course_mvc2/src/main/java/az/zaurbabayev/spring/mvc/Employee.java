@@ -6,6 +6,8 @@ public class Employee {
     private int salary;
     private String department;
 
+    
+
     public Employee() {
     }
 
