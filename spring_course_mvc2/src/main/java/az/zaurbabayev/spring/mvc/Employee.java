@@ -13,12 +13,19 @@ public class Employee {
 
     private String carBrand;
 
+    private Map<String,String> carBrandList;
+
     public Employee() {
         departments=new HashMap<>();
         departments.put("Information Technology","IT");
         departments.put("Sales","Sales");
         departments.put("Human Resources","HR");
 
+
+        carBrandList=new HashMap<>();
+        carBrandList.put("BMW","BMW");
+        carBrandList.put("Audi","Audi");
+        carBrandList.put("Mercedes-Benz","MB");
     }
 
     @Override
@@ -77,5 +84,13 @@ public class Employee {
 
     public void setCarBrand(String carBrand) {
         this.carBrand = carBrand;
+    }
+
+    public Map<String, String> getCarBrandList() {
+        return carBrandList;
+    }
+
+    public void setCarBrandList(Map<String, String> carBrandList) {
+        this.carBrandList = carBrandList;
     }
 }
