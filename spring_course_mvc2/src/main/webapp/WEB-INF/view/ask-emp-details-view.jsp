@@ -40,9 +40,10 @@
     <form:radiobuttons path="carBrand" items="${employee.carBrandList}"/>
     <br><br>
     Foreign language(s):
-    EN <form:checkbox path="languages" value="English"/>
-    FR <form:checkbox path="languages" value="French"/>
-    RU <form:checkbox path="languages" value="Russian"/>
+    <%--    EN <form:checkbox path="languages" value="English"/>--%>
+    <%--    FR <form:checkbox path="languages" value="French"/>--%>
+    <%--    RU <form:checkbox path="languages" value="Russian"/>--%>
+    <form:checkboxes path="languages" items="${employee.languageList}"/>
 
     <br><br>
     <input type="submit" value="OK">
