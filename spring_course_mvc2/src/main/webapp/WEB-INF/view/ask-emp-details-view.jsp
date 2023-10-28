@@ -11,8 +11,6 @@
 <br>
 
 
-
-
 <form:form action="showDetails" modelAttribute="employee">
     Name: <form:input path="name"/>
     <br><br>
@@ -28,10 +26,16 @@
     <%--    <form:option value="Sales" label="Sales"/>--%>
     <%--    <form:option value="Human Resources" label="HR"/>--%>
     <%--</form:select>--%>
-    
+
     Department: <form:select path="department">
     <form:options items="${employee.departments}"/>
 </form:select>
+    <br><br>
+
+    Which car do you want?
+    BMW <form:radiobutton path="carBrand" value="BMW"/>
+    AUDI <form:radiobutton path="carBrand" value="Audi"/>
+    MB <form:radiobutton path="carBrand" value="Mercedes-Benz"/>
 
     <br><br>
     <input type="submit" value="OK">
