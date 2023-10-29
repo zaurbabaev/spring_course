@@ -6,7 +6,7 @@
 <head>
     <title>Show details</title>
 </head>
-<a href="/spring_course_mvc/employee">Home</a>
+<a href="/spring_course_mvc">Home</a>
 <br>
 <body>
 <h3>Dear Employee, you are WELCOME!!!</h3>
@@ -26,6 +26,8 @@ Your salary: ${employee.salary}
 Your department: ${employee.department}
 <br><br>
 Your phone number: ${employee.phoneNumber}
+<br><br>
+Your email: ${employee.email}
 <br><br>
 Your car: ${employee.carBrand}
 <br><br>

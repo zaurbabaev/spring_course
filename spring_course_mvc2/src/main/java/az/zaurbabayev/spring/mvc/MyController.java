@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/employee")
+
 public class MyController {
 
-    @RequestMapping
+    @RequestMapping()
     public String showFirstView() {
         return "first-view";
     }

@@ -39,7 +39,9 @@
     Phone number: <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
     <br><br>
-
+    Phone email: <form:input path="email"/>
+    <form:errors path="email"/>
+    <br><br>
     Which car do you want?
     <%--    BMW <form:radiobutton path="carBrand" value="BMW"/>--%>
     <%--    AUDI <form:radiobutton path="carBrand" value="Audi"/>--%>
