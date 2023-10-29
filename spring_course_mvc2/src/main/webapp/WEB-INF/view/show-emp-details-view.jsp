@@ -25,7 +25,8 @@ Your salary: ${employee.salary}
 
 Your department: ${employee.department}
 <br><br>
-
+Your phone number: ${employee.phoneNumber}
+<br><br>
 Your car: ${employee.carBrand}
 <br><br>
 Language(s):
