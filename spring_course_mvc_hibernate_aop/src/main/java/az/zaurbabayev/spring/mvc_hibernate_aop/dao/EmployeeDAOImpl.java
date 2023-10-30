@@ -1,7 +1,6 @@
 package az.zaurbabayev.spring.mvc_hibernate_aop.dao;
 
 import az.zaurbabayev.spring.mvc_hibernate_aop.entity.Employee;
-import jakarta.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -17,7 +16,6 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
 //        List <Employee>allEmployees = session.createQuery("from Employee", Employee.class)
@@ -25,5 +23,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         Query<Employee> query = session.createQuery("from Employee", Employee.class);
         List<Employee> allEmployees = query.getResultList();
         return allEmployees;
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
     }
 }
