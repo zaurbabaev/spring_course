@@ -27,6 +27,13 @@
             <version>3.0.1</version>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>jakarta.servlet.jsp.jstl</groupId>-->
+<!--            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--        </dependency>-->
+
+
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -50,6 +57,8 @@
             <artifactId>spring-orm</artifactId>
             <version>6.0.13</version>
         </dependency>
+
+
 
     </dependencies>
     <build>

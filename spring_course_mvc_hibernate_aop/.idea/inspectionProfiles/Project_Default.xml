@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="border-collapse:" />
+            <item index="1" class="java.lang.String" itemvalue="collapse;" />
+            <item index="2" class="java.lang.String" itemvalue="table," />
+            <item index="3" class="java.lang.String" itemvalue="td," />
+            <item index="4" class="java.lang.String" itemvalue="th" />
+            <item index="5" class="java.lang.String" itemvalue="}" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SpringJavaInjectionPointsAutowiringInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>
