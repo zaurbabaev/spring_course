@@ -21,16 +21,16 @@ public class MyConfig {
 
     @Bean
     public DataSource dataSource() {
-        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
+        ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
-            comboPooledDataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-            comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/my_db3?useSSL=false&amp;serverTimezone=UTC");
-            comboPooledDataSource.setUser("bestuser");
-            comboPooledDataSource.setPassword("bestuser");
+            dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
+            dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/my_db3?useSSL=false&serverTimezone=UTC");
+            dataSource.setUser("bestuser");
+            dataSource.setPassword("bestuser");
         } catch (PropertyVetoException e) {
             throw new RuntimeException(e);
         }
-        return dataSource();
+        return dataSource;
     }
 
     @Bean
@@ -40,8 +40,8 @@ public class MyConfig {
         sessionFactory.setPackagesToScan("az.zaurbabayev.spring.rest.entity");
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.dialect"
-                , "org.hibernate.dialect.MySQLDialect");
-        hibernateProperties.setProperty("hibernate.show_sql", "true");
+                ,"org.hibernate.dialect.MySQLDialect");
+        hibernateProperties.setProperty("hibernate.show_sql","true");
         sessionFactory.setHibernateProperties(hibernateProperties);
         return sessionFactory;
     }
