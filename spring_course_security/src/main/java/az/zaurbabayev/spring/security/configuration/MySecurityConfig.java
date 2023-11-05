@@ -26,4 +26,5 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                         .roles("MANAGER", "HR"));
 
     }
+
 }
