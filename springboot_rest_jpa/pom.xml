@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.17</version>
+        <version>3.1.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>az.zaurbabayev.spring.springboot</groupId>
-    <artifactId>springboot_rest</artifactId>
+    <groupId>az.zaurbabayev.spring.springboot.rest_jpa</groupId>
+    <artifactId>springboot_rest_jpa</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot_rest</name>
-    <description>springboot_rest</description>
+    <name>springboot_rest_jpa</name>
+    <description>springboot_rest_jpa</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -27,16 +27,16 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
