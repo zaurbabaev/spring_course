@@ -1,8 +1,9 @@
-package az.zaurbabayev.spring.springboot.springboot_rest_jpa.controller;
+package az.zaurbabayev.spring.springboot.spring_data_jpa.controller;
 
-import az.zaurbabayev.spring.springboot.springboot_rest_jpa.entity.Employee;
-import az.zaurbabayev.spring.springboot.springboot_rest_jpa.exception_handling.NoSuchEmployeeException;
-import az.zaurbabayev.spring.springboot.springboot_rest_jpa.service.EmployeeService;
+
+import az.zaurbabayev.spring.springboot.spring_data_jpa.entity.Employee;
+import az.zaurbabayev.spring.springboot.spring_data_jpa.exception_handling.NoSuchEmployeeException;
+import az.zaurbabayev.spring.springboot.spring_data_jpa.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,7 @@ public class MyRESTController {
         Employee employee = employeeService.getEmployee(id);
         if (employee == null) {
             throw new NoSuchEmployeeException("There is no employee with ID = " +
-                    id + "in database");
+                    id + " in database");
 
         }
         return employee;
@@ -37,23 +38,28 @@ public class MyRESTController {
     }
 
     @PutMapping("/employees")
-    public Employee updateEmployee(@RequestBody Employee employee){
+    public Employee updateEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
     }
 
     @DeleteMapping("employees/{id}")
-    public String deleteEmployee(@PathVariable int id){
+    public String deleteEmployee(@PathVariable int id) {
         Employee employee = employeeService.getEmployee(id);
-        if(employee==null){
-        throw new NoSuchEmployeeException("There is no employee with ID = " + id +
-                " in database");
-        }
-        else{
+        if (employee == null) {
+            throw new NoSuchEmployeeException("There is no employee with ID = " + id +
+                    " in database");
+        } else {
             employeeService.deleteEmployee(id);
-            return "Employee with ID = "+id+" was deleted";
+            return "Employee with ID = " + id + " was deleted";
         }
 
+    }
+
+    @GetMapping("employees/name/{name}")
+    public List<Employee> showAllEmployeesByName(@PathVariable String name) {
+        List<Employee> employees = employeeService.findAllByName(name);
+        return employees;
     }
 
 }
